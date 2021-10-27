@@ -4,6 +4,7 @@
       :title="item.title"
       :label="item.label"
       :imgUrl="item.imgUrl"
+      :link="item.link"
       v-for="item in indications"
       :key="item.title"
     />

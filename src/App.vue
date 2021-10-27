@@ -1,20 +1,23 @@
 <template>
-  <img alt="myLogo" class="myLogo" src="./assets/logo-mss.png">
-  <Home msg="My Small Space"/>
-  <Cards msg="My Small Space"/>
+  <img alt="myLogo" class="myLogo" src="./assets/logo-mss.png" />
+  <Home msg="My Small Space" />
+  <Cards msg="My Small Space" />
+  <CustomFooter />
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import Cards from './components/cards'
+import Home from "./components/Home.vue";
+import Cards from "./components/cards";
+import CustomFooter from "./components/shared/customFooter.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Home,
-    Cards
-  }
-}
+    Cards,
+    CustomFooter,
+  },
+};
 </script>
 
 <style>
@@ -26,7 +29,7 @@ export default {
   margin-top: 60px;
 }
 .myLogo {
-  box-shadow:         0px 0px 20px #ffc4ca;
+  box-shadow: 0px 0px 20px #ffc4ca;
   border-radius: 176px;
   background-color: #ffc4ca;
   max-width: 180px;

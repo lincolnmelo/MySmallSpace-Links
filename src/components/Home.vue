@@ -1,24 +1,29 @@
 <template>
   <div class="homeComponent">
     <p>
-      <a href="https://www.instagram.com/mysmallspace906" target="_blank" rel="noopener">Por: Beatriz</a>
+      <a
+        href="https://www.instagram.com/mysmallspace906"
+        target="_blank"
+        rel="noopener"
+        >Por: Beatriz</a
+      >
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: "Home",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <style scoped>
 .homeComponent {
- color: #ffc4ca;
- font-weight: bold;
+  color: #ffc4ca;
+  font-weight: bold;
 }
 h3 {
   margin: 40px 0 0;
