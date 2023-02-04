@@ -1,11 +1,11 @@
 <template>
   <div class="homeComponent">
-    <p>
+    <p>Por: 
       <a
         href="https://www.instagram.com/mysmallspace906"
         target="_blank"
         rel="noopener"
-        >Por: Beatriz</a
+        >Beatriz</a
       >
     </p>
   </div>
@@ -24,6 +24,7 @@ export default {
 .homeComponent {
   color: #ffc4ca;
   font-weight: bold;
+  margin-top: 20px;
 }
 h3 {
   margin: 40px 0 0;

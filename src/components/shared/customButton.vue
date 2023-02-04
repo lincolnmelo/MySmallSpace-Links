@@ -8,7 +8,7 @@
 export default {
   name: "CustomButton",
   props: {
-    text: String,
+    text: String
   },
 };
 </script>
@@ -21,10 +21,10 @@ export default {
   color: #ffffff;
   font-weight: bold;
   text-align: center;
-  font-size: 16px;
-  padding: 15px;
+  font-size: 14px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
+  height: 35px;
+  width: 100px;
 }
 </style>
