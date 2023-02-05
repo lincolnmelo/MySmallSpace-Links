@@ -1,9 +1,7 @@
 <template>
   <div class="card pink" v-on:click="redirectLink">
     <span></span>
-    <h2>{{ title }}</h2>
-    <p>{{ label }}</p>
-    <img class="image" v-bind:src="`${imgUrl}`" alt="" />
+    <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" v-bind:src="`${linkItem}`"></iframe>
   </div>
 </template>
 
@@ -11,10 +9,10 @@
 export default {
   name: "Card",
   props: {
-    title: String,
-    label: String,
-    imgUrl: String,
-    link: String,
+    loja: String,
+    titulo: String,
+    categoria: String,
+    linkItem: String,
   },
   methods: {
     redirectLink() {
@@ -35,7 +33,7 @@ body {
   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
   padding: 15px;
   margin: 15px;
-  width: 400px;
+  width: 160px;
   min-height: 170px;
   transition: all 0.3s ease-out;
 }
@@ -52,10 +50,11 @@ body {
 
 .image {
   float: right;
-  max-width: 64px;
-  max-height: 64px;
+  max-width: 35px;
+  max-height: 34px;
+  position:absolute;
+  bottom:0;
 }
-
 .pink {
   border-left: 5px solid #ffc4ca;
 }

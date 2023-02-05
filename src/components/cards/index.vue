@@ -1,12 +1,12 @@
 <template>
   <div class="row">
     <Card
-      :title="item.title"
-      :label="item.label"
-      :imgUrl="item.imgUrl"
-      :link="item.link"
+      :loja="item.loja"
+      :titulo="item.titulo"
+      :categoria="item.categoria"
+      :linkItem="item.linkItem"
       v-for="item in indications"
-      :key="item.title"
+      :key="item.loja"
     />
   </div>
 </template>
