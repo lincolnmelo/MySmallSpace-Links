@@ -1,6 +1,5 @@
 <template>
   <div class="card pink" v-on:click="redirectLink">
-    <span></span>
     <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" v-bind:src="`${linkItem}`"></iframe>
   </div>
 </template>
