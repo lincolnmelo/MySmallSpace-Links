@@ -5,7 +5,6 @@
       <p>
         <img src="../../assets/icons/instagram.svg" alt="" onclick="window.open('https://www.instagram.com/mysmallspace906', '_blank');">
         <span onclick="window.open('https://www.instagram.com/mysmallspace906', '_blank');"> Beatriz</span>
-        
       </p>
     </div>
   </div>
