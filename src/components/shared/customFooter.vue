@@ -12,7 +12,6 @@ export default {
 .myFooter {
   position: fixed;
   padding: 6px 6px 0px 6px;
-  left: 0;
   bottom: 0;
   width: 100%;
   background-color: #ffc4ca;

@@ -1,29 +1,24 @@
 <template>
   <div class="row">
-    <Card
-      :loja="item.loja"
-      :titulo="item.titulo"
-      :categoria="item.categoria"
-      :linkItem="item.linkItem"
-      v-for="item in indications"
-      :key="item.loja"
-    />
+    <Card :loja="item.loja" :titulo="item.titulo" :categoria="item.categoria" :linkItem="item.linkItem"
+      v-for="item in this.dataCards" :key="item.loja" />
   </div>
 </template>
 
 <script>
 import Card from "../cards/Card.vue";
-import { Indications } from "../../services/getIndications";
 
 export default {
   name: "Cards",
+  props:{
+    dataCards:{
+          type:[Array,Object],
+          required:true,
+        },
+  },
   components: {
     Card,
-  },
-  setup() {
-    const indications = Indications;
-    return { indications };
-  },
+  }
 };
 </script>
 
@@ -34,5 +29,6 @@ export default {
   justify-content: center;
   align-items: center;
   flex-basis: 100%;
+  --bs-gutter-x: 0rem;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="card pink" v-on:click="redirectLink">
-    <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" v-bind:src="`${linkItem}`"></iframe>
+    <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
+      style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
+      v-bind:src="`${linkItem}`"></iframe>
   </div>
 </template>
 
@@ -38,7 +40,7 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-20px);
   cursor: pointer;
 }
 
@@ -51,9 +53,10 @@ body {
   float: right;
   max-width: 35px;
   max-height: 34px;
-  position:absolute;
-  bottom:0;
+  position: absolute;
+  bottom: 0;
 }
+
 .pink {
   border-left: 5px solid #ffc4ca;
 }

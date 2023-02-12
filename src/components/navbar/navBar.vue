@@ -1,4 +1,12 @@
 <template>
+  <div class="contentLogo">
+    <img alt="myLogo" class="myLogo" src="../../assets/logo-mss.png" />
+    <div class="referenceLogo">
+      <p>Por:
+        <a href="https://www.instagram.com/mysmallspace906" target="_blank" rel="noopener">Beatriz</a>
+      </p>
+    </div>
+  </div>
   <nav class="navbarmss navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="https://www.instagram.com/mysmallspace906" target="_blank">
@@ -21,53 +29,118 @@
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="" aria-label="Search" >
-          <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+          <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="submit" @click="handleSearsh()">Pesquisar</button>
         </form>
       </div>
     </div>
   </nav>
+  <div :key="cardsKey">
+    <Cards :dataCards="this.indications"/>
+  </div>
 </template>
 
 <script>
+import Cards from "../../components/cards";
+import { Indications } from "@/services/getIndications";
+import { ref } from 'vue'
+
 export default {
   name: "Navbar",
+  components: {
+    Cards
+  },
   props: {
     text: String,
   },
-};
+  indications: [],
+  data () {
+    return {
+      propsCards: this.indications,
+    }
+  },
+  created () {
+    this.indications = [...Indications];
+  },
+  setup () {
+    const cardsKey = ref(0)
+
+    const renderComponent = () => {
+      cardsKey.value++
+    }
+    return {
+      cardsKey,
+      renderComponent
+    }
+  },
+  methods: {
+    handleSearsh() {
+      this.renderComponent();
+    }
+  }
+ }
 </script>
 
 <style>
 .navbarmss {
-  margin-top: -28px;
+  margin-top: -45px;
+  margin-right: 20px;
   margin-bottom: 25px;
   margin-left: 20px;
-  margin-right: 20px;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: white;
 }
+
 .logoname {
   margin-top: -4px;
   height: 20px;
 }
+
 .form-control {
   border-color: #ffc4ca !important;
 }
+
 .form-control:focus {
   box-shadow: inset 0 0 2px #ffc4ca, 0 0 10px #ffc4ca !important;
   color: black !important;
+}
+.dropdown-menu {
+  margin-top: 0 !important;
 }
 .dropdown-item:focus {
   color: black !important;
   background-color: #fff0f1 !important;
 }
+
 .btn-outline-secondary {
   font-weight: bold !important;
 }
+
 .btn-outline-secondary:hover {
   border-color: #ffc4ca !important;
   color: black !important;
   background-color: #ffc4ca !important;
+}
+
+.contentLogo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #fff0f1;
+}
+
+.myLogo {
+  box-shadow: 0px 0px 20px #ffbcc3;
+  border-radius: 176px;
+  background-color: #ffc4ca;
+  max-width: 150px;
+  margin-top: 10px;
+}
+
+.referenceLogo {
+  color: #ffc4ca;
+  font-weight: bold;
+  margin-top: 10px;
+  padding-bottom: 20px;
 }
 </style>
