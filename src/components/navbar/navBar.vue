@@ -2,8 +2,10 @@
   <div class="contentLogo">
     <img alt="myLogo" class="myLogo" src="../../assets/logo-mss.png" />
     <div class="referenceLogo">
-      <p>Por:
-        <a href="https://www.instagram.com/mysmallspace906" target="_blank" rel="noopener">Beatriz</a>
+      <p>
+        <img src="../../assets/icons/instagram.svg" alt="" onclick="window.open('https://www.instagram.com/mysmallspace906', '_blank');">
+        <span onclick="window.open('https://www.instagram.com/mysmallspace906', '_blank');"> Beatriz</span>
+        
       </p>
     </div>
   </div>
@@ -129,6 +131,11 @@ export default {
   background-color: #fff0f1;
 }
 
+.contentLogo a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .myLogo {
   box-shadow: 0px 0px 20px #ffbcc3;
   border-radius: 176px;
@@ -142,5 +149,10 @@ export default {
   font-weight: bold;
   margin-top: 10px;
   padding-bottom: 20px;
+  font-size: 16px;
 }
+.referenceLogo p img {
+  margin-top: -3px;
+}
+
 </style>
