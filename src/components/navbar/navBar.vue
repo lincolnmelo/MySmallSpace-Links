@@ -148,10 +148,9 @@ export default {
   font-weight: bold;
   margin-top: 10px;
   padding-bottom: 20px;
-  font-size: 16px;
 }
 .referenceLogo p img {
-  margin-top: -3.8px;
+  margin-top: -3.5px;
 }
 
 </style>
