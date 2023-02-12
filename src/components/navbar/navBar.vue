@@ -151,7 +151,7 @@ export default {
   font-size: 16px;
 }
 .referenceLogo p img {
-  margin-top: -3px;
+  margin-top: -3.8px;
 }
 
 </style>
